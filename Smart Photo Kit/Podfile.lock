@@ -1,0 +1,66 @@
+PODS:
+  - Brightroom/Engine (2.5.0):
+    - Verge/Store (>= 8.9.1)
+  - Brightroom/UI-Classic (2.5.0):
+    - Brightroom/Engine
+    - TransitionPatch
+    - Verge/Store (>= 8.9.1)
+  - Brightroom/UI-Crop (2.5.0):
+    - Brightroom/Engine
+    - Verge/Store (>= 8.9.1)
+  - FMPhotoPicker (1.3.0)
+  - JLStickerTextView (0.1.2)
+  - Kingfisher (7.1.1)
+  - SnapKit (5.0.1)
+  - StickerView (1.0)
+  - SwiftyJSON (4.3.0)
+  - TransitionPatch (1.0.2)
+  - Verge/ObjcBridge (8.14.0)
+  - Verge/Store (8.14.0):
+    - Verge/ObjcBridge
+
+DEPENDENCIES:
+  - Brightroom/Engine
+  - Brightroom/UI-Classic
+  - Brightroom/UI-Crop
+  - FMPhotoPicker (~> 1.3.0)
+  - JLStickerTextView (from `https://github.com/Textcat/JLStickerTextView.git`)
+  - Kingfisher (~> 7.0)
+  - SnapKit (~> 5.0.0)
+  - StickerView
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - Brightroom
+    - FMPhotoPicker
+    - Kingfisher
+    - SnapKit
+    - StickerView
+    - SwiftyJSON
+    - TransitionPatch
+    - Verge
+
+EXTERNAL SOURCES:
+  JLStickerTextView:
+    :git: https://github.com/Textcat/JLStickerTextView.git
+
+CHECKOUT OPTIONS:
+  JLStickerTextView:
+    :commit: 45becbfeb0aa0dc2721fc31d1f900de40e187e78
+    :git: https://github.com/Textcat/JLStickerTextView.git
+
+SPEC CHECKSUMS:
+  Brightroom: 95620f8638003371c3e1c0606ffdb242514f7dcb
+  FMPhotoPicker: 954d3c3e72521baffecdc23422ae149fdde3cd63
+  JLStickerTextView: 99158380c95dc5455568892beb81d0529f3a547d
+  Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  StickerView: c486fbc722bddaff4f521afd9028ea4dc3e25a62
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  TransitionPatch: c02b48b1429255b14ef82b7e411034e0958b9681
+  Verge: ea62d807aa7d0106e50d1f171e1b6efe37e6c03f
+
+PODFILE CHECKSUM: e7f3198ea24bb8527792e3bc9f6169d885ec146a
+
+COCOAPODS: 1.11.2

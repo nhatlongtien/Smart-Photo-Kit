@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GradientColorCollectionViewCell" customModule="Smart_Photo_Kit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_color_1" translatesAutoresizingMaskIntoConstraints="NO" id="c2T-dU-0Ed">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="c2T-dU-0Ed" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ITG-je-vTj"/>
+                <constraint firstItem="c2T-dU-0Ed" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="K4W-n0-qwZ"/>
+                <constraint firstAttribute="trailing" secondItem="c2T-dU-0Ed" secondAttribute="trailing" id="MEj-OX-cAH"/>
+                <constraint firstAttribute="bottom" secondItem="c2T-dU-0Ed" secondAttribute="bottom" id="fJo-8k-b23"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="c2T-dU-0Ed" id="ifS-A6-ke3"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="100"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="gradient_color_1" width="780" height="488"/>
+    </resources>
+</document>

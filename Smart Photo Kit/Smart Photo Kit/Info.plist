@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Fz Soothing Italic.ttf</string>
+		<string>Fz Soothing.ttf</string>
+		<string>Pecita.otf</string>
+		<string>NVNFunkySignature-Regular.ttf</string>
+		<string>Fz Beloved Script.ttf</string>
+		<string>DanhDa-Bold.otf</string>
+		<string>NVN Brushwell Regular.ttf</string>
+		<string>NVN Melange.otf</string>
+		<string>1314 HICT Abigan.ttf</string>
+		<string>MTD Traditian.otf</string>
+		<string>TP Lost Land.ttf</string>
+		<string>Grab_Community_Inline.otf</string>
+	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Take Photo</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Get photo from library</string>
+</dict>
+</plist>

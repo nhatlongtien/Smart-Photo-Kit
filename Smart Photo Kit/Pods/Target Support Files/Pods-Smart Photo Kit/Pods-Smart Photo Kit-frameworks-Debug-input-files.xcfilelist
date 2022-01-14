@@ -1,0 +1,10 @@
+${PODS_ROOT}/Target Support Files/Pods-Smart Photo Kit/Pods-Smart Photo Kit-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Brightroom/Brightroom.framework
+${BUILT_PRODUCTS_DIR}/FMPhotoPicker/FMPhotoPicker.framework
+${BUILT_PRODUCTS_DIR}/JLStickerTextView/JLStickerTextView.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/StickerView/StickerView.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/TransitionPatch/TransitionPatch.framework
+${BUILT_PRODUCTS_DIR}/Verge/Verge.framework
