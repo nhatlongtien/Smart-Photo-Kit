@@ -10,6 +10,7 @@ import TCMask
 import StickerView
 import SnapKit
 import Kingfisher
+import FMPhotoPicker
 protocol AddBackgroundViewControllerDelegate:class{
     func didFinshDesign(image:UIImage?)
 }
@@ -84,7 +85,7 @@ class AddBackgroundViewController: UIViewController {
         gradientCollectionView.register(gradientColorNibCell, forCellWithReuseIdentifier: "GradientColorCollectionViewCell")
         gradientCollectionView.delegate = self
         gradientCollectionView.dataSource = self
-        //TODO: config frameCollectionview
+        //TODO: config stickerCollectionView
         let frameLayout = UICollectionViewFlowLayout()
         frameLayout.scrollDirection = .horizontal
         frameLayout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
@@ -102,21 +103,16 @@ class AddBackgroundViewController: UIViewController {
         ratioScreenCollectionView.register(ratioNibCell, forCellWithReuseIdentifier: "RatioScreenCollectionViewCell")
         ratioScreenCollectionView.delegate = self
         ratioScreenCollectionView.dataSource = self
+        //
+        if image != nil{
+            addStickerImageToImageView(image: image)
+        }
         
-        
-    }
-    override func viewDidLayoutSubviews() {
-        //setupSquareImageView()
     }
     override func viewDidAppear(_ animated: Bool) {
         setupSquareImageView()
         imageView.image = gradientColorImgs.first
         imageView.contentMode = .scaleAspectFill
-        
-        //
-        if image != nil{
-            addStickerImageToImageView(image: image)
-        }
         //
         stickerVM.getSticker { success, sticker in
             if success{
@@ -126,6 +122,13 @@ class AddBackgroundViewController: UIViewController {
         }
     }
     //MARK: UI Event
+    @IBAction func selectPhotoButtonWasPressed(_ sender: Any) {
+        var config = FMPhotoPickerConfig()
+        config.selectMode = .single
+        let picker = FMPhotoPickerViewController(config: config)
+        picker.delegate = self
+        self.present(picker, animated: true)
+    }
     @IBAction func verticalRatioScreenButtonWasPressed(_ sender: Any) {
         isHorizontalScreen = false
         verticalView.layer.borderColor = UIColor.gold.cgColor
@@ -347,6 +350,11 @@ extension AddBackgroundViewController:UICollectionViewDelegate, UICollectionView
         }else if collectionView == stickerCollectionView{
             if indexPath.row == 10{
                 print("More sticker image")
+                let targetVC = StickerViewController()
+                targetVC.sticker = self.sticker
+                targetVC.delegate = self
+                targetVC.modalPresentationStyle = .fullScreen
+                self.present(targetVC, animated: true, completion: nil)
             }else{
                 let testImage = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: 150, height: 150))
                 let imageUrl = URL(string: (sticker.first?.listItem[indexPath.row])!)
@@ -440,6 +448,19 @@ extension AddBackgroundViewController:StickerViewDelegate{
     
     func stickerViewDidClose(_ stickerView: StickerView) {
         
+    }
+}
+//MARK: StickerViewControllerDelegate
+extension AddBackgroundViewController:StickerViewControllerDelegate{
+    func passStickerImage(sticker: UIImage?) {
+        self.addStickerImageToImageView(image: sticker)
+    }
+}
+//MARK: FMPhotoPickerViewControllerDelegate
+extension AddBackgroundViewController:FMPhotoPickerViewControllerDelegate{
+    func fmPhotoPickerController(_ picker: FMPhotoPickerViewController, didFinishPickingPhotoWith photos: [UIImage]){
+        self.dismiss(animated: true, completion: nil)
+        addStickerImageToImageView(image: photos.first)
     }
 }
 

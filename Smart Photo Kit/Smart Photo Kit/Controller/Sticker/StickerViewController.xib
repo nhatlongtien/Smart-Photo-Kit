@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StickerViewController" customModule="Smart_Photo_Kit" customModuleProvider="target">
             <connections>
+                <outlet property="stickerTableView" destination="zC9-tb-9Un" id="yEJ-ej-WWg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,8 +29,11 @@
                             <state key="normal" title="Cancel">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="cancelButtonWasPressed:" destination="-1" eventType="touchUpInside" id="Tg1-Y5-Uvx"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBy-tD-0LU">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBy-tD-0LU">
                             <rect key="frame" x="360" y="8" width="44" height="34"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -44,6 +48,12 @@
                                 <constraint firstAttribute="height" constant="1" id="wBX-f6-Pyh"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQK-RN-RrD">
+                            <rect key="frame" x="180.5" y="14.5" width="53" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -53,30 +63,26 @@
                         <constraint firstAttribute="trailing" secondItem="koO-g5-FTe" secondAttribute="trailing" id="Xyo-kp-bXk"/>
                         <constraint firstItem="koO-g5-FTe" firstAttribute="leading" secondItem="01X-Cj-H8R" secondAttribute="leading" id="aVh-jR-waF"/>
                         <constraint firstAttribute="trailing" secondItem="UBy-tD-0LU" secondAttribute="trailing" constant="10" id="dF6-hO-wMG"/>
+                        <constraint firstItem="TQK-RN-RrD" firstAttribute="centerY" secondItem="Ok8-PB-bSY" secondAttribute="centerY" id="gqM-Oa-fGY"/>
                         <constraint firstAttribute="bottom" secondItem="koO-g5-FTe" secondAttribute="bottom" id="pKW-C3-NbB"/>
                         <constraint firstAttribute="height" constant="50" id="xBG-cu-6bg"/>
+                        <constraint firstItem="TQK-RN-RrD" firstAttribute="centerX" secondItem="01X-Cj-H8R" secondAttribute="centerX" id="xLV-Gz-hXI"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="8LM-fR-tbT">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zC9-tb-9Un">
                     <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xIP-t4-DcN">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="8LM-fR-tbT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3CC-NF-skX"/>
-                <constraint firstItem="8LM-fR-tbT" firstAttribute="top" secondItem="01X-Cj-H8R" secondAttribute="bottom" id="6ue-wF-CNj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8LM-fR-tbT" secondAttribute="trailing" id="D9u-Wu-uBg"/>
+                <constraint firstItem="zC9-tb-9Un" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7cw-cd-zLZ"/>
                 <constraint firstItem="01X-Cj-H8R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="OT1-hV-nJG"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8LM-fR-tbT" secondAttribute="bottom" id="UXF-d4-0y8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zC9-tb-9Un" secondAttribute="bottom" id="ZKD-5K-zfP"/>
+                <constraint firstItem="zC9-tb-9Un" firstAttribute="top" secondItem="01X-Cj-H8R" secondAttribute="bottom" id="ZMh-LD-qiP"/>
                 <constraint firstItem="01X-Cj-H8R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fYY-g1-3Bf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zC9-tb-9Un" secondAttribute="trailing" id="omT-Ht-KRW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="01X-Cj-H8R" secondAttribute="trailing" id="sui-N5-Wzz"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="61.607142857142854"/>

@@ -23,7 +23,7 @@ class MenuButton{
             MenuButton(name: "Add Text", iconName: "add_text_icon"),
             MenuButton(name: "Photo Creator", iconName: "designer_icon"),
             MenuButton(name: "Frame", iconName: "frame_icon"),
-            MenuButton(name: "Remove", iconName: "frame_icon"),
+            //MenuButton(name: "Remove", iconName: "frame_icon"),
         ]
     }
 }

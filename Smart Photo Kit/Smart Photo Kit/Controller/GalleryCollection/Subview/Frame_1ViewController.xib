@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Frame_1ViewController" customModule="Smart_Photo_Kit" customModuleProvider="target">
             <connections>
                 <outlet property="bgImage" destination="c95-5x-F17" id="K2h-Lp-LHb"/>
+                <outlet property="frameImage" destination="zC0-ta-gl8" id="U0G-oU-7J2"/>
                 <outlet property="img1" destination="9VL-Ru-syf" id="WhH-nH-KHI"/>
                 <outlet property="img2" destination="7LI-AV-KmS" id="UH1-0W-hlw"/>
                 <outlet property="img3" destination="LOg-dG-NHX" id="V6e-FE-J9O"/>
@@ -102,7 +103,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame_1" translatesAutoresizingMaskIntoConstraints="NO" id="zC0-ta-gl8" userLabel="frame">
+                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame_1" translatesAutoresizingMaskIntoConstraints="NO" id="zC0-ta-gl8" userLabel="frame">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="230" id="XxZ-X4-Rb9"/>

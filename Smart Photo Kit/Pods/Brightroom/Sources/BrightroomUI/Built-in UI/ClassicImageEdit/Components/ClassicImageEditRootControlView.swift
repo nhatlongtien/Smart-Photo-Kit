@@ -38,7 +38,7 @@ open class ClassicImageEditRootControl: ClassicImageEditRootControlBase {
     case edit
   }
 
-  public var displayType: DisplayType = .filter {
+  public var displayType: DisplayType = .edit {
     didSet {
       guard oldValue != displayType else { return }
       set(displayType: displayType)
@@ -103,8 +103,8 @@ open class ClassicImageEditRootControl: ClassicImageEditRootControlBase {
 
     body: do {
 
-      filtersButton.setTitle(viewModel.localizedStrings.filter, for: .normal)
-      editButton.setTitle(viewModel.localizedStrings.edit, for: .normal)
+      //filtersButton.setTitle(viewModel.localizedStrings.filter, for: .normal)
+      //editButton.setTitle(viewModel.localizedStrings.edit, for: .normal)
 
       filtersButton.tintColor = .clear
       editButton.tintColor = .clear
@@ -118,8 +118,8 @@ open class ClassicImageEditRootControl: ClassicImageEditRootControlBase {
       filtersButton.titleLabel!.font = UIFont.boldSystemFont(ofSize: 17)
       editButton.titleLabel!.font = UIFont.boldSystemFont(ofSize: 17)
 
-      filtersButton.addTarget(self, action: #selector(didTapFilterButton), for: .touchUpInside)
-      editButton.addTarget(self, action: #selector(didTapEditButton), for: .touchUpInside)
+      //filtersButton.addTarget(self, action: #selector(didTapFilterButton), for: .touchUpInside)
+      //editButton.addTarget(self, action: #selector(didTapEditButton), for: .touchUpInside)
     }
 
   }

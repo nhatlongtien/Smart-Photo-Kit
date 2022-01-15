@@ -246,10 +246,24 @@
                                                 <action selector="clearBackgoundColorButtonWasPressed:" destination="-1" eventType="touchUpInside" id="HKF-s4-stY"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70w-93-opk">
+                                            <rect key="frame" x="10" y="9.3333333333332931" width="38" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="38" id="95j-x8-oe0"/>
+                                                <constraint firstAttribute="height" constant="35" id="oIA-eV-054"/>
+                                            </constraints>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" backgroundImage="photo" catalog="system"/>
+                                            <connections>
+                                                <action selector="selectPhotoButtonWasPressed:" destination="-1" eventType="touchUpInside" id="Mqk-Ip-D4y"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="fVG-hs-54i" firstAttribute="leading" secondItem="tYf-6s-GxP" secondAttribute="trailing" constant="5" id="1Dc-ac-7QP"/>
+                                        <constraint firstItem="70w-93-opk" firstAttribute="leading" secondItem="aHM-fz-d7k" secondAttribute="leading" constant="10" id="3h8-zz-tUC"/>
                                         <constraint firstItem="PLs-FI-LTp" firstAttribute="top" secondItem="boP-jM-v1g" secondAttribute="bottom" constant="15" id="4oL-tt-6mh"/>
                                         <constraint firstItem="qlB-qX-2Oh" firstAttribute="top" secondItem="PLs-FI-LTp" secondAttribute="bottom" constant="15" id="7Mh-y0-JFt"/>
                                         <constraint firstItem="PLs-FI-LTp" firstAttribute="leading" secondItem="aHM-fz-d7k" secondAttribute="leading" constant="15" id="C5X-nT-G0F"/>
@@ -275,6 +289,7 @@
                                         <constraint firstItem="E3x-w2-31k" firstAttribute="top" secondItem="BPe-OT-zAv" secondAttribute="bottom" constant="15" id="p5r-wo-T80"/>
                                         <constraint firstItem="tYf-6s-GxP" firstAttribute="top" secondItem="aHM-fz-d7k" secondAttribute="top" constant="10" id="px0-3q-M3O"/>
                                         <constraint firstAttribute="trailing" secondItem="L5B-VM-xFn" secondAttribute="trailing" id="qJo-UH-wxu"/>
+                                        <constraint firstItem="70w-93-opk" firstAttribute="centerY" secondItem="Bq2-Ul-4r8" secondAttribute="centerY" id="s5G-i9-VTa"/>
                                         <constraint firstItem="boP-jM-v1g" firstAttribute="leading" secondItem="aHM-fz-d7k" secondAttribute="leading" id="twp-Ek-ONB"/>
                                         <constraint firstAttribute="bottom" secondItem="qlB-qX-2Oh" secondAttribute="bottom" constant="20" id="uu3-rL-xjc"/>
                                         <constraint firstItem="ZFz-QR-fwh" firstAttribute="centerY" secondItem="DXt-Vn-28a" secondAttribute="centerY" id="y6O-G7-WTg"/>
@@ -324,6 +339,7 @@
     </objects>
     <resources>
         <image name="arrow.triangle.2.circlepath.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

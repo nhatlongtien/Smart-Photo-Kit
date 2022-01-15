@@ -93,6 +93,12 @@
 		38C28DB627915A33006A5603 /* StickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C28DB527915A33006A5603 /* StickerModel.swift */; };
 		38C28DBF2791A165006A5603 /* StickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C28DBD2791A165006A5603 /* StickerViewController.swift */; };
 		38C28DC02791A165006A5603 /* StickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C28DBE2791A165006A5603 /* StickerViewController.xib */; };
+		38C28DC42791C33B006A5603 /* StickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C28DC22791C33B006A5603 /* StickerCollectionViewCell.swift */; };
+		38C28DC52791C33B006A5603 /* StickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C28DC32791C33B006A5603 /* StickerCollectionViewCell.xib */; };
+		38C28DCA2791C8C8006A5603 /* StickerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C28DC82791C8C8006A5603 /* StickerHeaderView.swift */; };
+		38C28DCB2791C8C8006A5603 /* StickerHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C28DC92791C8C8006A5603 /* StickerHeaderView.xib */; };
+		38C28DCE2791D00C006A5603 /* StickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C28DCC2791D00C006A5603 /* StickerTableViewCell.swift */; };
+		38C28DCF2791D00C006A5603 /* StickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C28DCD2791D00C006A5603 /* StickerTableViewCell.xib */; };
 		38FA3FD027795BFB00B0D15E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FA3FCF27795BFB00B0D15E /* AppDelegate.swift */; };
 		38FA3FD927795BFF00B0D15E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FA3FD827795BFF00B0D15E /* Assets.xcassets */; };
 		38FA3FDC27795BFF00B0D15E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FA3FDA27795BFF00B0D15E /* LaunchScreen.storyboard */; };
@@ -220,6 +226,12 @@
 		38C28DB527915A33006A5603 /* StickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerModel.swift; sourceTree = "<group>"; };
 		38C28DBD2791A165006A5603 /* StickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerViewController.swift; sourceTree = "<group>"; };
 		38C28DBE2791A165006A5603 /* StickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerViewController.xib; sourceTree = "<group>"; };
+		38C28DC22791C33B006A5603 /* StickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		38C28DC32791C33B006A5603 /* StickerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerCollectionViewCell.xib; sourceTree = "<group>"; };
+		38C28DC82791C8C8006A5603 /* StickerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerHeaderView.swift; sourceTree = "<group>"; };
+		38C28DC92791C8C8006A5603 /* StickerHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerHeaderView.xib; sourceTree = "<group>"; };
+		38C28DCC2791D00C006A5603 /* StickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerTableViewCell.swift; sourceTree = "<group>"; };
+		38C28DCD2791D00C006A5603 /* StickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerTableViewCell.xib; sourceTree = "<group>"; };
 		38FA3FCC27795BFB00B0D15E /* Smart Photo Kit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Photo Kit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FA3FCF27795BFB00B0D15E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38FA3FD827795BFF00B0D15E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -415,10 +427,32 @@
 		38C28DBA2791A112006A5603 /* Sticker */ = {
 			isa = PBXGroup;
 			children = (
+				38C28DC72791C892006A5603 /* Header */,
+				38C28DC12791C319006A5603 /* Cell */,
 				38C28DBD2791A165006A5603 /* StickerViewController.swift */,
 				38C28DBE2791A165006A5603 /* StickerViewController.xib */,
 			);
 			path = Sticker;
+			sourceTree = "<group>";
+		};
+		38C28DC12791C319006A5603 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				38C28DC22791C33B006A5603 /* StickerCollectionViewCell.swift */,
+				38C28DC32791C33B006A5603 /* StickerCollectionViewCell.xib */,
+				38C28DCC2791D00C006A5603 /* StickerTableViewCell.swift */,
+				38C28DCD2791D00C006A5603 /* StickerTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		38C28DC72791C892006A5603 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				38C28DC82791C8C8006A5603 /* StickerHeaderView.swift */,
+				38C28DC92791C8C8006A5603 /* StickerHeaderView.xib */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		38FA3FC327795BFB00B0D15E = {
@@ -644,18 +678,21 @@
 				38FA400627799EB400B0D15E /* ButtonCollectionViewCell.xib in Resources */,
 				385A17FA277F3AE40083FD21 /* GradientColorCollectionViewCell.xib in Resources */,
 				38C28DA827900837006A5603 /* GoogleService-Info.plist in Resources */,
+				38C28DC52791C33B006A5603 /* StickerCollectionViewCell.xib in Resources */,
 				38A478DB2783ED4A00BD2C4D /* RatioScreenCollectionViewCell.xib in Resources */,
 				38198CFF277B545B00091D78 /* AddTextViewController.xib in Resources */,
 				385EDD99278054450080F779 /* ToolsFrameView.xib in Resources */,
 				38C28D71278D1EF8006A5603 /* NVN Brushwell Regular.ttf in Resources */,
 				38198D04277B59D900091D78 /* MenuButtonAddTextCollectionViewCell.xib in Resources */,
 				38C28D6D278D1C3C006A5603 /* Fz Beloved Script.ttf in Resources */,
+				38C28DCF2791D00C006A5603 /* StickerTableViewCell.xib in Resources */,
 				38FA3FD927795BFF00B0D15E /* Assets.xcassets in Resources */,
 				38C28D73278D1F58006A5603 /* NVN Melange.otf in Resources */,
 				385EDD9727803A3B0080F779 /* CreateGalleryCollectionViewController.xib in Resources */,
 				38C28D64278D194C006A5603 /* Fz Soothing Italic.ttf in Resources */,
 				38198CF02779A25600091D78 /* HomeViewController.xib in Resources */,
 				38C28D5A278D12E3006A5603 /* FontTextView.xib in Resources */,
+				38C28DCB2791C8C8006A5603 /* StickerHeaderView.xib in Resources */,
 				38C28D79278D20C8006A5603 /* TP Lost Land.ttf in Resources */,
 				38C28D60278D1404006A5603 /* FontCollectionViewCell.xib in Resources */,
 				38C28DC02791A165006A5603 /* StickerViewController.xib in Resources */,
@@ -742,6 +779,7 @@
 				38C28DA2278D3902006A5603 /* MLMultiArray+Image.swift in Sources */,
 				38198CFE277B545B00091D78 /* AddTextViewController.swift in Sources */,
 				38C28D96278D3902006A5603 /* UIImage+CVPixelBuffer.swift in Sources */,
+				38C28DC42791C33B006A5603 /* StickerCollectionViewCell.swift in Sources */,
 				38C28DA1278D3902006A5603 /* CGImage+RawBytes.swift in Sources */,
 				38198D1C277C4D0800091D78 /* TextColorCollectionViewCell.swift in Sources */,
 				38C28D9C278D3902006A5603 /* MLModel+Images.swift in Sources */,
@@ -758,12 +796,14 @@
 				38A478DD2783EFA900BD2C4D /* RatioScreenModel.swift in Sources */,
 				38198CEF2779A25600091D78 /* HomeViewController.swift in Sources */,
 				385A17F3277F39720083FD21 /* GradientColorModel.swift in Sources */,
+				38C28DCE2791D00C006A5603 /* StickerTableViewCell.swift in Sources */,
 				38C28D9D278D3902006A5603 /* CoreML+Combine.swift in Sources */,
 				38198D0F277C024100091D78 /* ColorModel.swift in Sources */,
 				38C28D94278D3902006A5603 /* Array+Extensions.swift in Sources */,
 				38C28D9F278D3902006A5603 /* CGImage+CVPixelBuffer.swift in Sources */,
 				385A1801277FDF5F0083FD21 /* CustomeUIImageView.swift in Sources */,
 				38C28D98278D3902006A5603 /* UIImage+Extensions.swift in Sources */,
+				38C28DCA2791C8C8006A5603 /* StickerHeaderView.swift in Sources */,
 				38C28DB627915A33006A5603 /* StickerModel.swift in Sources */,
 				38198D0D277C01F900091D78 /* UIColor + Extension.swift in Sources */,
 				385A17F9277F3AE40083FD21 /* GradientColorCollectionViewCell.swift in Sources */,

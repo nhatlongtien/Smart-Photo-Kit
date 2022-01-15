@@ -54,8 +54,8 @@ public final class ClassicImageEditViewController: UIViewController {
     public var control_preset_normal_name = "Normal"
 
     public var cancel = "Cancel"
-    public var filter = "Filter"
-    public var edit = "Edit"
+    //public var filter = "Filter"
+    //public var edit = "Edit"
 
     public var editAdjustment = "Adjust"
     public var editMask = "Mask"
@@ -173,6 +173,9 @@ public final class ClassicImageEditViewController: UIViewController {
     // FIXME: Check loading
 
     super.viewDidLoad()
+      //
+      navigationController?.navigationBar.tintColor = .black
+      //
 
     cropView.setCropOutsideOverlay(
       .init()&>.do {

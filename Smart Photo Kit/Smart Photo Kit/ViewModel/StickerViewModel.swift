@@ -24,8 +24,10 @@ class StickerViewModel{
                     let data = json["data"]
                     let holiday = StickerModel(listItem: data["holidays"].arrayValue, groupName: "Holidays")
                     let nature = StickerModel(listItem: data["nature"].arrayValue, groupName: "Nature")
+                    let ecommerce = StickerModel(listItem: data["pricetag_ecommerce"].arrayValue, groupName: "Ecommerce & Price tag")
                     returnSticker.append(holiday)
                     returnSticker.append(nature)
+                    returnSticker.append(ecommerce)
                 }
                 completionHandler(true, returnSticker)
             }
