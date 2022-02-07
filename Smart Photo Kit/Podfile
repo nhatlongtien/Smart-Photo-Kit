@@ -16,4 +16,9 @@ pod "JLStickerTextView", :git =>
 pod 'StickerView'
 pod 'SwiftyJSON', '~> 4.0'
 pod 'Kingfisher', '~> 7.0'
+pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
+pod 'Firebase/Database'
+pod 'PullToDismiss', '~> 2.2'
 end

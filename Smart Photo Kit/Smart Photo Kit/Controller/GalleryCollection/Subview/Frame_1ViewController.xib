@@ -71,7 +71,7 @@
                     <rect key="frame" x="0.0" y="94" width="414" height="558"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t07-fX-Mxj">
-                            <rect key="frame" x="19.5" y="164" width="375" height="230"/>
+                            <rect key="frame" x="19.5" y="139" width="375" height="230"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c95-5x-F17" userLabel="bg_image">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
@@ -171,7 +171,7 @@
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="5V0-kR-ybT" secondAttribute="bottom" id="JYa-aQ-yYh"/>
-                        <constraint firstItem="t07-fX-Mxj" firstAttribute="centerY" secondItem="GPW-LZ-QPu" secondAttribute="centerY" id="Lwn-xt-eZG"/>
+                        <constraint firstItem="t07-fX-Mxj" firstAttribute="centerY" secondItem="GPW-LZ-QPu" secondAttribute="centerY" constant="-25" id="Lwn-xt-eZG"/>
                         <constraint firstItem="5V0-kR-ybT" firstAttribute="leading" secondItem="GPW-LZ-QPu" secondAttribute="leading" id="MYR-VG-hEg"/>
                         <constraint firstItem="t07-fX-Mxj" firstAttribute="centerX" secondItem="GPW-LZ-QPu" secondAttribute="centerX" id="TNf-Nj-ivb"/>
                         <constraint firstAttribute="trailing" secondItem="5V0-kR-ybT" secondAttribute="trailing" id="UKV-Hf-IWP"/>

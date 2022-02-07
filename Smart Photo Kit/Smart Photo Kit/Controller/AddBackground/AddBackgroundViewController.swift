@@ -18,6 +18,7 @@ class AddBackgroundViewController: UIViewController {
     
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var bgImageCollectionView: UICollectionView!
     @IBOutlet weak var colorCollectionView: UICollectionView!
     @IBOutlet weak var gradientCollectionView: UICollectionView!
     @IBOutlet weak var stickerCollectionView: UICollectionView!
@@ -30,12 +31,15 @@ class AddBackgroundViewController: UIViewController {
     let colors = Array(ColorModel.shareColor().reversed())
     let gradientColorImgs = GradientColorModel.share()
     let frameImgs = FrameModel.share()
+    let bgImgs = BackgroundModel.share()
+    var isSlectMoreBgIgm = false
     let verticalScreen = RatioScreenModel.shareRatioVerticalScreen()
     let horizontalScreen = RatioScreenModel.shareRatioHorizontalScreen()
     var isHorizontalScreen:Bool = true
     weak var delegate:AddBackgroundViewControllerDelegate?
     let stickerVM = StickerViewModel()
     var sticker:[StickerModel] = []
+    
     //
     private var _selectedStickerView:StickerView?
 
@@ -103,16 +107,26 @@ class AddBackgroundViewController: UIViewController {
         ratioScreenCollectionView.register(ratioNibCell, forCellWithReuseIdentifier: "RatioScreenCollectionViewCell")
         ratioScreenCollectionView.delegate = self
         ratioScreenCollectionView.dataSource = self
+        //TODO: Config background image collection view
+        let bgLayout = UICollectionViewFlowLayout()
+        bgLayout.scrollDirection = .horizontal
+        bgLayout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        bgImageCollectionView.collectionViewLayout = gradientLayout
+        let bgNibCell = UINib(nibName: "GradientColorCollectionViewCell", bundle: nil)
+        bgImageCollectionView.register(bgNibCell, forCellWithReuseIdentifier: "GradientColorCollectionViewCell")
+        bgImageCollectionView.delegate = self
+        bgImageCollectionView.dataSource = self
         //
         if image != nil{
             addStickerImageToImageView(image: image)
         }
-        
+        //
+        setupSquareImageView()
+        imageView.image = bgImgs.first!
+        imageView.contentMode = .scaleAspectFill
     }
     override func viewDidAppear(_ animated: Bool) {
-        setupSquareImageView()
-        imageView.image = gradientColorImgs.first
-        imageView.contentMode = .scaleAspectFill
+        
         //
         stickerVM.getSticker { success, sticker in
             if success{
@@ -123,6 +137,7 @@ class AddBackgroundViewController: UIViewController {
     }
     //MARK: UI Event
     @IBAction func selectPhotoButtonWasPressed(_ sender: Any) {
+        isSlectMoreBgIgm = false
         var config = FMPhotoPickerConfig()
         config.selectMode = .single
         let picker = FMPhotoPickerViewController(config: config)
@@ -156,6 +171,10 @@ class AddBackgroundViewController: UIViewController {
         UIGraphicsEndImageContext()
         self.delegate?.didFinshDesign(image: img)
         self.dismiss(animated: true)
+    }
+    @IBAction func clearBgImageButtonWasPressed(_ sender: Any) {
+        imageView.backgroundColor = .clear
+        imageView.image = nil
     }
     
     @IBAction func clearBackgoundColorButtonWasPressed(_ sender: Any) {
@@ -287,6 +306,8 @@ extension AddBackgroundViewController:UICollectionViewDelegate, UICollectionView
                 return verticalScreen.count
             }
             
+        }else if collectionView == bgImageCollectionView{
+            return bgImgs.count + 1
         }else{
             return 0
         }
@@ -321,6 +342,17 @@ extension AddBackgroundViewController:UICollectionViewDelegate, UICollectionView
             }
             return cell
             
+        }else if collectionView == bgImageCollectionView{
+            let cell = bgImageCollectionView.dequeueReusableCell(withReuseIdentifier: "GradientColorCollectionViewCell", for: indexPath) as! GradientColorCollectionViewCell
+            if indexPath.row == 0 {
+                cell.imageView.image = UIImage(named: "add_img")
+                cell.imageView.contentMode = .scaleAspectFit
+            }else{
+                cell.configCell(item: bgImgs[indexPath.row - 1]!)
+                cell.imageView.contentMode = .scaleToFill
+            }
+            
+            return cell
         }else{
             return UICollectionViewCell()
         }
@@ -334,6 +366,8 @@ extension AddBackgroundViewController:UICollectionViewDelegate, UICollectionView
             return CGSize(width: 80, height: 60)
         }else if collectionView == ratioScreenCollectionView{
             return CGSize(width: 70, height: 35)
+        }else if collectionView == bgImageCollectionView{
+            return CGSize(width: 80, height: 60)
         }else{
             return CGSize()
         }
@@ -341,9 +375,20 @@ extension AddBackgroundViewController:UICollectionViewDelegate, UICollectionView
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == colorCollectionView{
-            //self.imageView.image = UIImage(color: colors[indexPath.row], size: imageView.bounds.size)!
             self.imageView.image = nil
             self.imageView.backgroundColor = colors[indexPath.row]
+        }else if collectionView == bgImageCollectionView{
+            if indexPath.row == 0{
+                isSlectMoreBgIgm = true
+                var config = FMPhotoPickerConfig()
+                config.selectMode = .single
+                let picker = FMPhotoPickerViewController(config: config)
+                picker.delegate = self
+                self.present(picker, animated: true)
+            }else{
+                self.imageView.image = bgImgs[indexPath.row - 1]
+                self.imageView.contentMode = .scaleAspectFill
+            }
         }else if collectionView == gradientCollectionView{
             self.imageView.image = gradientColorImgs[indexPath.row]
             self.imageView.contentMode = .scaleToFill
@@ -353,7 +398,7 @@ extension AddBackgroundViewController:UICollectionViewDelegate, UICollectionView
                 let targetVC = StickerViewController()
                 targetVC.sticker = self.sticker
                 targetVC.delegate = self
-                targetVC.modalPresentationStyle = .fullScreen
+                targetVC.modalPresentationStyle = .custom
                 self.present(targetVC, animated: true, completion: nil)
             }else{
                 let testImage = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: 150, height: 150))
@@ -460,7 +505,13 @@ extension AddBackgroundViewController:StickerViewControllerDelegate{
 extension AddBackgroundViewController:FMPhotoPickerViewControllerDelegate{
     func fmPhotoPickerController(_ picker: FMPhotoPickerViewController, didFinishPickingPhotoWith photos: [UIImage]){
         self.dismiss(animated: true, completion: nil)
-        addStickerImageToImageView(image: photos.first)
+        if isSlectMoreBgIgm == false{
+            addStickerImageToImageView(image: photos.first)
+        }else{
+            self.imageView.image = photos.first
+            self.imageView.contentMode = .scaleAspectFill
+        }
+        
     }
 }
 

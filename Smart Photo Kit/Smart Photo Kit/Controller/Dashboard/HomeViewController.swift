@@ -37,6 +37,8 @@ class HomeViewController: BaseViewController {
         //fitAspectFitImageView()
         imageView.isHidden = true
         emptyView.isHidden = false
+        //
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleNotificationFrame(_:)), name:Notification.Name(rawValue: Constant.NOTIFI_FRAME) , object: nil)
     }
     //MARK: UIEvent
     @IBAction func cameraButtonWasPressed(_ sender: Any) {
@@ -64,10 +66,17 @@ class HomeViewController: BaseViewController {
             alert.addAction(btnOK)
             self.present(alert, animated: true, completion: nil)
         }else{
-            showAlert("Opps!", message: "No image to delete")
+            showAlert("Opps!", message: "No image to delete!")
         }
     }
     @IBAction func shareButtonWasPressed(_ sender: Any) {
+        if let image = imageView.image{
+            let items = [image]
+            let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+            self.present(ac, animated: true, completion: nil)
+        }else{
+            showAlert("Opps!", message: "No image to share!")
+        }
     }
     @IBAction func saveButtonWasPressed(_ sender: Any) {
         if let image = imageView.image{
@@ -121,34 +130,8 @@ class HomeViewController: BaseViewController {
         
         return imageRect
     }
-}
-//MARK: Pick photo from camera
-extension HomeViewController{
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[.originalImage] as! UIImage
-        imageView.image = image
-        fitAspectFitImageView()
-        self.imageView.isHidden = false
-        self.emptyView.isHidden = true
-    }
-}
-//MARK: UICollectionViewDelegate, UICollectionViewDataSource
-extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return menuButton.count
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = menuCollectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCollectionViewCell", for: indexPath) as! ButtonCollectionViewCell
-        cell.configCell(item: menuButton[indexPath.row])
-        return cell
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 120, height: 55)
-    }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            let uiImage: UIImage = imageView.image!
+    func setupCrop(){
+        if let uiImage = imageView.image{
             let controller = PhotosCropViewController(imageProvider: .init(image: uiImage))
             controller.modalPresentationStyle = .fullScreen
             //
@@ -170,12 +153,15 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
                 }
             }
             self.present(controller, animated: true, completion: nil)
-        case 1:
+        }else{
+            showAlert("Opps!", message: "Let's select image")
+        }
+    }
+    func setupBasisEditor(){
+        if let uiImage = imageView.image{
             var options = ClassicImageEditOptions()
             options.croppingAspectRatio = nil
-            let uiImage: UIImage = imageView.image!
             let controller = ClassicImageEditViewController(imageProvider: .init(image: uiImage), options: options)
-            
             let navigationController = UINavigationController(rootViewController: controller)
             navigationController.modalPresentationStyle = .fullScreen
             controller.handlers.didCancelEditing = { controller in
@@ -184,7 +170,6 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
             controller.handlers.didEndEditing = { [weak self] controller, stack in
                 guard let self = self else { return }
                 controller.dismiss(animated: true, completion: nil)
-                
                 try! stack.makeRenderer().render { result in
                     switch result {
                     case let .success(rendered):
@@ -194,35 +179,97 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
                     }
                 }
             }
-            
             self.present(navigationController, animated: true, completion: nil)
-        case 2:
+        }else{
+            showAlert("Opps!", message: "Let's select image")
+        }
+    }
+    func setupFilter(){
+        if let uiImage = imageView.image{
             var config = FMPhotoPickerConfig()
-            let uiImage: UIImage = imageView.image!
             let editor = FMImageEditorViewController(config: config, sourceImage: uiImage)
             editor.delegate = self
             self.present(editor, animated: true)
-        case 3:
-            let uiImage: UIImage = imageView.image!
+        }else{
+            showAlert("Opps!", message: "Let's select image")
+        }
+    }
+    func setupRemoveBackground(){
+        if let uiImage = imageView.image{
             let maskView = TCMaskView(image: uiImage)
             maskView.delegate = self
             maskView.presentFrom(rootViewController: self, animated: true)
-        case 4:
+        }else{
+            showAlert("Opps!", message: "Let's select image")
+        }
+    }
+    func setupAddText(){
+        if let image = imageView.image{
             let addTextVC = AddTextViewController()
             addTextVC.delegate = self
-            addTextVC.selectedImg = imageView.image
+            addTextVC.selectedImg = image
             addTextVC.modalPresentationStyle = .fullScreen
             self.present(addTextVC, animated: true, completion: nil)
+        }else{
+            showAlert("Opps!", message: "Let's select image")
+        }
+    }
+    func setupPhotoCreator(){
+        let targetVC = AddBackgroundViewController()
+        targetVC.delegate = self
+        targetVC.modalPresentationStyle = .fullScreen
+        targetVC.image = imageView.image
+        self.present(targetVC, animated: true, completion: nil)
+    }
+    func setupCreateFrame(){
+        let targetVC = CreateGalleryCollectionViewController()
+        targetVC.modalPresentationStyle = .fullScreen
+        self.present(targetVC, animated: true, completion: nil)
+    }
+}
+//MARK: Pick photo from camera
+extension HomeViewController{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
+        heightImgConstant.constant = containerImageView.frame.size.height
+        widthImgConstant.constant = containerImageView.frame.size.width
+        view.layoutIfNeeded()
+        imageView.image = image
+        fitAspectFitImageView()
+        self.imageView.isHidden = false
+        self.emptyView.isHidden = true
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+//MARK: UICollectionViewDelegate, UICollectionViewDataSource
+extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return menuButton.count
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = menuCollectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCollectionViewCell", for: indexPath) as! ButtonCollectionViewCell
+        cell.configCell(item: menuButton[indexPath.row])
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 120, height: 55)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            setupRemoveBackground()
+        case 1:
+            setupCrop()
+        case 2:
+            setupBasisEditor()
+        case 3:
+            setupFilter()
+        case 4:
+            setupAddText()
         case 5:
-            let targetVC = AddBackgroundViewController()
-            targetVC.delegate = self
-            targetVC.modalPresentationStyle = .fullScreen
-            targetVC.image = imageView.image
-            self.present(targetVC, animated: true, completion: nil)
+            setupPhotoCreator()
         case 6:
-            let targetVC = CreateGalleryCollectionViewController()
-            targetVC.modalPresentationStyle = .fullScreen
-            self.present(targetVC, animated: true, completion: nil)
+            setupCreateFrame()
         case 7:
             //Remove background image
             if let image = imageView.image{
@@ -266,6 +313,7 @@ extension HomeViewController:TCMaskViewDelegate{
         fitAspectFitImageView()
     }
 }
+//MARK: AddTextViewControllerDelegate
 extension HomeViewController:AddTextViewControllerDelegate{
     func didFinishAddTextInImage(image: UIImage?) {
         heightImgConstant.constant = containerImageView.frame.size.height
@@ -277,25 +325,31 @@ extension HomeViewController:AddTextViewControllerDelegate{
         
     }
 }
+//MARK: AddBackgroundViewControllerDelegate
 extension HomeViewController:AddBackgroundViewControllerDelegate{
     func didFinshDesign(image: UIImage?) {
-        print(containerImageView.frame.size.height)
-        print(containerImageView.frame.size.width)
-        heightImgConstant.constant = containerImageView.frame.size.height
-        widthImgConstant.constant = containerImageView.frame.size.width
-        
-        self.imageView.image = image
-        self.view.layoutIfNeeded()
-        print(self.imageView.contentClippingRect)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            
+        if let image = image {
+            self.emptyView.isHidden = true
+            self.imageView.isHidden = false
+            heightImgConstant.constant = containerImageView.frame.size.height
+            widthImgConstant.constant = containerImageView.frame.size.width
+            self.imageView.image = image
+            self.view.layoutIfNeeded()
             self.fitAspectFitImageView()
-            
         }
-        
-        
     }
-    
-    
+}
+//MARK: FrameNotificationCenter
+extension HomeViewController{
+    @objc func handleNotificationFrame(_ notification:NSNotification){
+        if let image = notification.userInfo?["image"] as? UIImage {
+            self.emptyView.isHidden = true
+            self.imageView.isHidden = false
+            heightImgConstant.constant = containerImageView.frame.size.height
+            widthImgConstant.constant = containerImageView.frame.size.width
+            self.imageView.image = image
+            self.view.layoutIfNeeded()
+            self.fitAspectFitImageView()
+          }
+    }
 }

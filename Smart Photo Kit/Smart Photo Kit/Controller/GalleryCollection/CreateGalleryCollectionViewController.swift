@@ -52,15 +52,7 @@ class CreateGalleryCollectionViewController: UIViewController {
         frameCollectionView.delegate = self
         frameCollectionView.dataSource = self
         //
-        addFrame_1VC()
-    }
-    
-    @IBAction func cancelButtonWasPressed(_ sender: Any) {
-        self.dismiss(animated: true)
-        
-    }
-    @IBAction func doneButtonWasPressed(_ sender: Any) {
-        
+        addFrameVC(vc: Frame_1ViewController())
     }
     
     //MARK: Helper Method
@@ -82,18 +74,16 @@ class CreateGalleryCollectionViewController: UIViewController {
         }
         return byteArray
     }
-    func addFrame_1VC(){
-        let frame_1VC = Frame_1ViewController()
-        addChild(frame_1VC)
-        containerView.addSubview(frame_1VC.view)
-        frame_1VC.didMove(toParent: self)
+    func addFrameVC(vc:UIViewController){
+        addChild(vc)
+        containerView.addSubview(vc.view)
+        vc.didMove(toParent: self)
         //
-        frame_1VC.view.translatesAutoresizingMaskIntoConstraints = false
-        frame_1VC.view.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0).isActive = true
-        frame_1VC.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0).isActive = true
-        frame_1VC.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 0).isActive = true
-        frame_1VC.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 0).isActive = true
-        
+        vc.view.translatesAutoresizingMaskIntoConstraints = false
+        vc.view.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0).isActive = true
+        vc.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0).isActive = true
+        vc.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 0).isActive = true
+        vc.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 0).isActive = true
     }
 }
 extension CreateGalleryCollectionViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -116,7 +106,23 @@ extension CreateGalleryCollectionViewController:UICollectionViewDelegate, UIColl
         print(indexPath.row)
         switch frameImgs[indexPath.row].frameViewName {
         case "frame_1":
-            addFrame_1VC()
+            addFrameVC(vc: Frame_1ViewController())
+        case "frame_2":
+            addFrameVC(vc: Frame_2ViewController())
+        case "frame_3":
+            addFrameVC(vc: Frame_3ViewController())
+        case "frame_4":
+            addFrameVC(vc: Frame_4ViewController())
+        case "frame_5":
+            addFrameVC(vc: Frame_5ViewController())
+        case "frame_6":
+            addFrameVC(vc: Frame_6ViewController())
+        case "frame_7":
+            addFrameVC(vc: Frame_7ViewController())
+        case "frame_8":
+            addFrameVC(vc: Frame_8ViewController())
+        case "frame_9":
+            addFrameVC(vc: Frame_9ViewController())
         default:
             break
         }
@@ -156,3 +162,4 @@ extension CreateGalleryCollectionViewController:StickerViewDelegate{
         
     }
 }
+

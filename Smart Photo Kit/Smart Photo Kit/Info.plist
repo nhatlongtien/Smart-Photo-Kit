@@ -17,9 +17,5 @@
 		<string>TP Lost Land.ttf</string>
 		<string>Grab_Community_Inline.otf</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>Take Photo</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Get photo from library</string>
 </dict>
 </plist>

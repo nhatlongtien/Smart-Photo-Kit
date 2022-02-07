@@ -27,6 +27,7 @@ class AddTextViewController: UIViewController {
     let textSizeView = TextSizeView()
     let shadowTextView = ShadowTextView()
     let fontTextView = FontTextView()
+    let alignTextView = AlignTextView()
     //
     var selectedImg:UIImage?
     let menus = AddTextmenuButton.share()
@@ -60,6 +61,7 @@ class AddTextViewController: UIViewController {
         textSizeView.delegate = self
         shadowTextView.delegate = self
         fontTextView.delegate = self
+        alignTextView.delegate = self
     }
     @IBAction func cancelButtonWasPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -162,20 +164,23 @@ extension AddTextViewController: UICollectionViewDelegate, UICollectionViewDataS
             addTextBox()
         case 1:
             if mainImageView.currentlyEditingLabel != nil{
-                setupTextColorView()
+                setupFontTextView()
             }
         case 2:
             if mainImageView.currentlyEditingLabel != nil{
                 setupTextSizeView()
             }
         case 3:
-            print("Font Style")
             if mainImageView.currentlyEditingLabel != nil{
-                setupFontTextView()
+                setupTextColorView()
             }
         case 4:
             if mainImageView.currentlyEditingLabel != nil{
                 setupShadowTextView()
+            }
+        case 5:
+            if mainImageView.currentlyEditingLabel != nil{
+                setupAlignTextView()
             }
         default:
             break
@@ -213,6 +218,10 @@ extension AddTextViewController{
     private func setupFontTextView(){
         dynamicBottomView.addSubview(fontTextView)
         fontTextView.frame = dynamicBottomView.bounds
+    }
+    private func setupAlignTextView(){
+        dynamicBottomView.addSubview(alignTextView)
+        alignTextView.frame = dynamicBottomView.bounds
     }
 }
 //MARK: TextColorViewDelegate
@@ -264,7 +273,8 @@ extension AddTextViewController:ShadowTextViewDelegate{
     
     func pickShadowColorFinish(color: UIColor?) {
         colorShadow = color ?? UIColor.gray
-        setShadow(widthShadow: self.widthShadow, heightShadow: self.heightShadow, blurShadow: self.blurShadow, colorShadow: self.colorShadow)
+        let randomWidth = CGFloat.random(in: 0.0001...0.1)
+        setShadow(widthShadow: self.widthShadow + randomWidth, heightShadow: self.heightShadow, blurShadow: self.blurShadow, colorShadow: self.colorShadow)
     }
 }
 //MARK: FontTextViewDelegate
@@ -280,5 +290,31 @@ extension AddTextViewController:FontTextViewDelegate{
     }
     
     
+}
+//MARK: AlignTextViewDelegate
+extension AddTextViewController:AlignTextViewDelegate{
+    func didtapCloseAlignTextView() {
+        self.alignTextView.removeFromSuperview()
+    }
+    
+    func didTapLeftAlign() {
+        if mainImageView.currentlyEditingLabel != nil{
+            mainImageView.currentlyEditingLabel.labelTextView?.alignment = .left
+        }
+    }
+    
+    func didTapCenterAlign() {
+        if mainImageView.currentlyEditingLabel != nil{
+            mainImageView.currentlyEditingLabel.labelTextView?.alignment = .left
+            mainImageView.currentlyEditingLabel.labelTextView?.alignment = .center
+        }
+    }
+    
+    func didTapRightAlign() {
+        if mainImageView.currentlyEditingLabel != nil{
+            mainImageView.currentlyEditingLabel.labelTextView?.alignment = .left
+            mainImageView.currentlyEditingLabel.labelTextView?.alignment = .right
+        }
+    }
 }
 

@@ -15,4 +15,5 @@ class Constant{
         "NVN Brushwell Regular",
         "TP Lost Land"
     ]
+    static let NOTIFI_FRAME = "notifi_frame"
 }

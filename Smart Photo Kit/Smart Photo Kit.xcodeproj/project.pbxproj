@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		17E41100EEA642B7C328D7CA /* Pods_Smart_Photo_Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFA63494282CD6112524654 /* Pods_Smart_Photo_Kit.framework */; };
+		38022CD42795B893001B6D8B /* Frame_5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38022CD22795B893001B6D8B /* Frame_5ViewController.swift */; };
+		38022CD52795B893001B6D8B /* Frame_5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38022CD32795B893001B6D8B /* Frame_5ViewController.xib */; };
+		38022CDA2795BC55001B6D8B /* Frame_6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38022CD82795BC55001B6D8B /* Frame_6ViewController.swift */; };
+		38022CDB2795BC55001B6D8B /* Frame_6ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38022CD92795BC55001B6D8B /* Frame_6ViewController.xib */; };
+		38022CDE2796B539001B6D8B /* Frame_7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38022CDC2796B538001B6D8B /* Frame_7ViewController.swift */; };
+		38022CDF2796B539001B6D8B /* Frame_7ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38022CDD2796B538001B6D8B /* Frame_7ViewController.xib */; };
+		38022CE22796B958001B6D8B /* Frame_8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38022CE02796B958001B6D8B /* Frame_8ViewController.swift */; };
+		38022CE32796B958001B6D8B /* Frame_8ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38022CE12796B958001B6D8B /* Frame_8ViewController.xib */; };
+		38022CE62796BBDB001B6D8B /* Frame_9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38022CE42796BBDB001B6D8B /* Frame_9ViewController.swift */; };
+		38022CE72796BBDB001B6D8B /* Frame_9ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38022CE52796BBDB001B6D8B /* Frame_9ViewController.xib */; };
+		38022CE9279813A8001B6D8B /* AlignTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38022CE8279813A7001B6D8B /* AlignTextView.xib */; };
+		38022CEB2798156E001B6D8B /* AlignTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38022CEA2798156E001B6D8B /* AlignTextView.swift */; };
+		38022CED279AA919001B6D8B /* BackgroundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38022CEC279AA919001B6D8B /* BackgroundModel.swift */; };
 		38198CEF2779A25600091D78 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38198CED2779A25600091D78 /* HomeViewController.swift */; };
 		38198CF02779A25600091D78 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38198CEE2779A25600091D78 /* HomeViewController.xib */; };
 		38198CF5277B0D5700091D78 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38198CF4277B0D5600091D78 /* MenuButton.swift */; };
@@ -43,11 +56,21 @@
 		385EDDA1278097A30080F779 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385EDDA0278097A30080F779 /* BaseViewController.swift */; };
 		385EDDA327814C740080F779 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385EDDA227814C730080F779 /* UIView+Extension.swift */; };
 		385EDDA527814CD30080F779 /* Uiimage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385EDDA427814CD30080F779 /* Uiimage + Extension.swift */; };
+		3861AE12279469F6005DDDDE /* Frame_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3861AE10279469F6005DDDDE /* Frame_2ViewController.swift */; };
+		3861AE13279469F6005DDDDE /* Frame_2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3861AE11279469F6005DDDDE /* Frame_2ViewController.xib */; };
+		3892BD932795093A0000FED3 /* Frame_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3892BD912795093A0000FED3 /* Frame_3ViewController.swift */; };
+		3892BD942795093A0000FED3 /* Frame_3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3892BD922795093A0000FED3 /* Frame_3ViewController.xib */; };
+		3892BD9927950EB40000FED3 /* Frame_4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3892BD9727950EB40000FED3 /* Frame_4ViewController.swift */; };
+		3892BD9A27950EB40000FED3 /* Frame_4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3892BD9827950EB40000FED3 /* Frame_4ViewController.xib */; };
 		38A478D227817B9500BD2C4D /* ScaleUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A478D127817B9500BD2C4D /* ScaleUIImageView.swift */; };
 		38A478D72782D5EA00BD2C4D /* HelperMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A478D62782D5EA00BD2C4D /* HelperMethod.swift */; };
 		38A478DA2783ED4A00BD2C4D /* RatioScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A478D82783ED4A00BD2C4D /* RatioScreenCollectionViewCell.swift */; };
 		38A478DB2783ED4A00BD2C4D /* RatioScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38A478D92783ED4A00BD2C4D /* RatioScreenCollectionViewCell.xib */; };
 		38A478DD2783EFA900BD2C4D /* RatioScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A478DC2783EFA900BD2C4D /* RatioScreenModel.swift */; };
+		38B0548A279E40470081A6F8 /* BottomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B05488279E40470081A6F8 /* BottomCollectionViewCell.swift */; };
+		38B0548B279E40470081A6F8 /* BottomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38B05489279E40470081A6F8 /* BottomCollectionViewCell.xib */; };
+		38B05491279E42610081A6F8 /* StickerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B05490279E42610081A6F8 /* StickerMenu.swift */; };
+		38B0549627AF61260081A6F8 /* CornerCustomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B0549527AF61260081A6F8 /* CornerCustomeView.swift */; };
 		38C28D58278D1239006A5603 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C28D57278D1239006A5603 /* Constant.swift */; };
 		38C28D5A278D12E3006A5603 /* FontTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C28D59278D12E3006A5603 /* FontTextView.xib */; };
 		38C28D5C278D1375006A5603 /* FontTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C28D5B278D1375006A5603 /* FontTextView.swift */; };
@@ -85,10 +108,6 @@
 		38C28DA4278D3902006A5603 /* CVPixelBuffer+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C28D93278D3902006A5603 /* CVPixelBuffer+Rotate.swift */; };
 		38C28DA6278D3AA5006A5603 /* CIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C28DA5278D3AA5006A5603 /* CIImage + Extension.swift */; };
 		38C28DA827900837006A5603 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38C28DA727900837006A5603 /* GoogleService-Info.plist */; };
-		38C28DAB27900A5B006A5603 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 38C28DAA27900A5B006A5603 /* FirebaseAnalytics */; };
-		38C28DAD27900A5B006A5603 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 38C28DAC27900A5B006A5603 /* FirebaseDatabase */; };
-		38C28DAF27900A5B006A5603 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 38C28DAE27900A5B006A5603 /* FirebaseFirestore */; };
-		38C28DB127900A5B006A5603 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 38C28DB027900A5B006A5603 /* FirebaseStorage */; };
 		38C28DB327915501006A5603 /* StickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C28DB227915500006A5603 /* StickerViewModel.swift */; };
 		38C28DB627915A33006A5603 /* StickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C28DB527915A33006A5603 /* StickerModel.swift */; };
 		38C28DBF2791A165006A5603 /* StickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C28DBD2791A165006A5603 /* StickerViewController.swift */; };
@@ -145,6 +164,19 @@
 
 /* Begin PBXFileReference section */
 		2AFA63494282CD6112524654 /* Pods_Smart_Photo_Kit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Photo_Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38022CD22795B893001B6D8B /* Frame_5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame_5ViewController.swift; sourceTree = "<group>"; };
+		38022CD32795B893001B6D8B /* Frame_5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Frame_5ViewController.xib; sourceTree = "<group>"; };
+		38022CD82795BC55001B6D8B /* Frame_6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame_6ViewController.swift; sourceTree = "<group>"; };
+		38022CD92795BC55001B6D8B /* Frame_6ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Frame_6ViewController.xib; sourceTree = "<group>"; };
+		38022CDC2796B538001B6D8B /* Frame_7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame_7ViewController.swift; sourceTree = "<group>"; };
+		38022CDD2796B538001B6D8B /* Frame_7ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Frame_7ViewController.xib; sourceTree = "<group>"; };
+		38022CE02796B958001B6D8B /* Frame_8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame_8ViewController.swift; sourceTree = "<group>"; };
+		38022CE12796B958001B6D8B /* Frame_8ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Frame_8ViewController.xib; sourceTree = "<group>"; };
+		38022CE42796BBDB001B6D8B /* Frame_9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame_9ViewController.swift; sourceTree = "<group>"; };
+		38022CE52796BBDB001B6D8B /* Frame_9ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Frame_9ViewController.xib; sourceTree = "<group>"; };
+		38022CE8279813A7001B6D8B /* AlignTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlignTextView.xib; sourceTree = "<group>"; };
+		38022CEA2798156E001B6D8B /* AlignTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignTextView.swift; sourceTree = "<group>"; };
+		38022CEC279AA919001B6D8B /* BackgroundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModel.swift; sourceTree = "<group>"; };
 		38198CED2779A25600091D78 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		38198CEE2779A25600091D78 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		38198CF4277B0D5600091D78 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
@@ -180,11 +212,21 @@
 		385EDDA0278097A30080F779 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		385EDDA227814C730080F779 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		385EDDA427814CD30080F779 /* Uiimage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uiimage + Extension.swift"; sourceTree = "<group>"; };
+		3861AE10279469F6005DDDDE /* Frame_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame_2ViewController.swift; sourceTree = "<group>"; };
+		3861AE11279469F6005DDDDE /* Frame_2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Frame_2ViewController.xib; sourceTree = "<group>"; };
+		3892BD912795093A0000FED3 /* Frame_3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame_3ViewController.swift; sourceTree = "<group>"; };
+		3892BD922795093A0000FED3 /* Frame_3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Frame_3ViewController.xib; sourceTree = "<group>"; };
+		3892BD9727950EB40000FED3 /* Frame_4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame_4ViewController.swift; sourceTree = "<group>"; };
+		3892BD9827950EB40000FED3 /* Frame_4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Frame_4ViewController.xib; sourceTree = "<group>"; };
 		38A478D127817B9500BD2C4D /* ScaleUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleUIImageView.swift; sourceTree = "<group>"; };
 		38A478D62782D5EA00BD2C4D /* HelperMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethod.swift; sourceTree = "<group>"; };
 		38A478D82783ED4A00BD2C4D /* RatioScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatioScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		38A478D92783ED4A00BD2C4D /* RatioScreenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatioScreenCollectionViewCell.xib; sourceTree = "<group>"; };
 		38A478DC2783EFA900BD2C4D /* RatioScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatioScreenModel.swift; sourceTree = "<group>"; };
+		38B05488279E40470081A6F8 /* BottomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCollectionViewCell.swift; sourceTree = "<group>"; };
+		38B05489279E40470081A6F8 /* BottomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCollectionViewCell.xib; sourceTree = "<group>"; };
+		38B05490279E42610081A6F8 /* StickerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerMenu.swift; sourceTree = "<group>"; };
+		38B0549527AF61260081A6F8 /* CornerCustomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerCustomeView.swift; sourceTree = "<group>"; };
 		38C28D57278D1239006A5603 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		38C28D59278D12E3006A5603 /* FontTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontTextView.xib; sourceTree = "<group>"; };
 		38C28D5B278D1375006A5603 /* FontTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTextView.swift; sourceTree = "<group>"; };
@@ -250,13 +292,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38C28DAD27900A5B006A5603 /* FirebaseDatabase in Frameworks */,
 				38FA3FED27795C5300B0D15E /* TCCore.framework in Frameworks */,
 				38FA3FF027795C5800B0D15E /* TCMask.framework in Frameworks */,
-				38C28DAB27900A5B006A5603 /* FirebaseAnalytics in Frameworks */,
-				38C28DB127900A5B006A5603 /* FirebaseStorage in Frameworks */,
 				17E41100EEA642B7C328D7CA /* Pods_Smart_Photo_Kit.framework in Frameworks */,
-				38C28DAF27900A5B006A5603 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +356,8 @@
 				38198D28277D52B600091D78 /* ShadowTextView.swift */,
 				38C28D59278D12E3006A5603 /* FontTextView.xib */,
 				38C28D5B278D1375006A5603 /* FontTextView.swift */,
+				38022CE8279813A7001B6D8B /* AlignTextView.xib */,
+				38022CEA2798156E001B6D8B /* AlignTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +388,7 @@
 			children = (
 				385EDD98278054450080F779 /* ToolsFrameView.xib */,
 				385EDD9A278054F50080F779 /* ToolsFrameView.swift */,
+				38B0549527AF61260081A6F8 /* CornerCustomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -368,6 +409,22 @@
 			children = (
 				385EDD9C278057DF0080F779 /* Frame_1ViewController.swift */,
 				385EDD9D278057DF0080F779 /* Frame_1ViewController.xib */,
+				3861AE10279469F6005DDDDE /* Frame_2ViewController.swift */,
+				3861AE11279469F6005DDDDE /* Frame_2ViewController.xib */,
+				3892BD912795093A0000FED3 /* Frame_3ViewController.swift */,
+				3892BD922795093A0000FED3 /* Frame_3ViewController.xib */,
+				3892BD9727950EB40000FED3 /* Frame_4ViewController.swift */,
+				3892BD9827950EB40000FED3 /* Frame_4ViewController.xib */,
+				38022CD22795B893001B6D8B /* Frame_5ViewController.swift */,
+				38022CD32795B893001B6D8B /* Frame_5ViewController.xib */,
+				38022CD82795BC55001B6D8B /* Frame_6ViewController.swift */,
+				38022CD92795BC55001B6D8B /* Frame_6ViewController.xib */,
+				38022CDC2796B538001B6D8B /* Frame_7ViewController.swift */,
+				38022CDD2796B538001B6D8B /* Frame_7ViewController.xib */,
+				38022CE02796B958001B6D8B /* Frame_8ViewController.swift */,
+				38022CE12796B958001B6D8B /* Frame_8ViewController.xib */,
+				38022CE42796BBDB001B6D8B /* Frame_9ViewController.swift */,
+				38022CE52796BBDB001B6D8B /* Frame_9ViewController.xib */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -442,6 +499,8 @@
 				38C28DC32791C33B006A5603 /* StickerCollectionViewCell.xib */,
 				38C28DCC2791D00C006A5603 /* StickerTableViewCell.swift */,
 				38C28DCD2791D00C006A5603 /* StickerTableViewCell.xib */,
+				38B05488279E40470081A6F8 /* BottomCollectionViewCell.swift */,
+				38B05489279E40470081A6F8 /* BottomCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -522,6 +581,8 @@
 				385A17FB277F47A00083FD21 /* FrameModel.swift */,
 				38A478DC2783EFA900BD2C4D /* RatioScreenModel.swift */,
 				38C28DB527915A33006A5603 /* StickerModel.swift */,
+				38022CEC279AA919001B6D8B /* BackgroundModel.swift */,
+				38B05490279E42610081A6F8 /* StickerMenu.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -589,10 +650,6 @@
 			);
 			name = "Smart Photo Kit";
 			packageProductDependencies = (
-				38C28DAA27900A5B006A5603 /* FirebaseAnalytics */,
-				38C28DAC27900A5B006A5603 /* FirebaseDatabase */,
-				38C28DAE27900A5B006A5603 /* FirebaseFirestore */,
-				38C28DB027900A5B006A5603 /* FirebaseStorage */,
 			);
 			productName = "Smart Photo Kit";
 			productReference = 38FA3FCC27795BFB00B0D15E /* Smart Photo Kit.app */;
@@ -664,13 +721,17 @@
 			files = (
 				38C28D6B278D1C0C006A5603 /* NVNFunkySignature-Regular.ttf in Resources */,
 				38C28D7B278D2153006A5603 /* Grab_Community_Inline.otf in Resources */,
+				38022CDF2796B539001B6D8B /* Frame_7ViewController.xib in Resources */,
+				38022CD52795B893001B6D8B /* Frame_5ViewController.xib in Resources */,
 				385A17EC277DEA610083FD21 /* AddBackgroundViewController.xib in Resources */,
 				38C28D75278D1FE7006A5603 /* 1314 HICT Abigan.ttf in Resources */,
+				38022CE72796BBDB001B6D8B /* Frame_9ViewController.xib in Resources */,
 				385EDD9F278057DF0080F779 /* Frame_1ViewController.xib in Resources */,
 				38198D23277D407D00091D78 /* TextSizeView.xib in Resources */,
 				38C28D69278D1BAE006A5603 /* Pecita.otf in Resources */,
 				38198D1D277C4D0800091D78 /* TextColorCollectionViewCell.xib in Resources */,
 				38C28D63278D194C006A5603 /* Fz Soothing.ttf in Resources */,
+				3892BD9A27950EB40000FED3 /* Frame_4ViewController.xib in Resources */,
 				38198D19277C4C6D00091D78 /* TextColorView.xib in Resources */,
 				38C28D77278D204D006A5603 /* MTD Traditian.otf in Resources */,
 				38C28D6F278D1E64006A5603 /* DanhDa-Bold.otf in Resources */,
@@ -679,7 +740,9 @@
 				385A17FA277F3AE40083FD21 /* GradientColorCollectionViewCell.xib in Resources */,
 				38C28DA827900837006A5603 /* GoogleService-Info.plist in Resources */,
 				38C28DC52791C33B006A5603 /* StickerCollectionViewCell.xib in Resources */,
+				38022CE9279813A8001B6D8B /* AlignTextView.xib in Resources */,
 				38A478DB2783ED4A00BD2C4D /* RatioScreenCollectionViewCell.xib in Resources */,
+				38022CE32796B958001B6D8B /* Frame_8ViewController.xib in Resources */,
 				38198CFF277B545B00091D78 /* AddTextViewController.xib in Resources */,
 				385EDD99278054450080F779 /* ToolsFrameView.xib in Resources */,
 				38C28D71278D1EF8006A5603 /* NVN Brushwell Regular.ttf in Resources */,
@@ -687,14 +750,18 @@
 				38C28D6D278D1C3C006A5603 /* Fz Beloved Script.ttf in Resources */,
 				38C28DCF2791D00C006A5603 /* StickerTableViewCell.xib in Resources */,
 				38FA3FD927795BFF00B0D15E /* Assets.xcassets in Resources */,
+				3892BD942795093A0000FED3 /* Frame_3ViewController.xib in Resources */,
 				38C28D73278D1F58006A5603 /* NVN Melange.otf in Resources */,
 				385EDD9727803A3B0080F779 /* CreateGalleryCollectionViewController.xib in Resources */,
 				38C28D64278D194C006A5603 /* Fz Soothing Italic.ttf in Resources */,
 				38198CF02779A25600091D78 /* HomeViewController.xib in Resources */,
+				3861AE13279469F6005DDDDE /* Frame_2ViewController.xib in Resources */,
+				38022CDB2795BC55001B6D8B /* Frame_6ViewController.xib in Resources */,
 				38C28D5A278D12E3006A5603 /* FontTextView.xib in Resources */,
 				38C28DCB2791C8C8006A5603 /* StickerHeaderView.xib in Resources */,
 				38C28D79278D20C8006A5603 /* TP Lost Land.ttf in Resources */,
 				38C28D60278D1404006A5603 /* FontCollectionViewCell.xib in Resources */,
+				38B0548B279E40470081A6F8 /* BottomCollectionViewCell.xib in Resources */,
 				38C28DC02791A165006A5603 /* StickerViewController.xib in Resources */,
 				38198D27277D4E4600091D78 /* ShadowTextView.xib in Resources */,
 			);
@@ -750,6 +817,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38FA400527799EB400B0D15E /* ButtonCollectionViewCell.swift in Sources */,
+				38022CDA2795BC55001B6D8B /* Frame_6ViewController.swift in Sources */,
 				38198D21277D3E6900091D78 /* CustomSlider.swift in Sources */,
 				38198D06277B5D8600091D78 /* AddTextMenuButton.swift in Sources */,
 				385A17FC277F47A00083FD21 /* FrameModel.swift in Sources */,
@@ -761,20 +829,26 @@
 				38198D25277D427800091D78 /* TextSizeView.swift in Sources */,
 				385EDD9627803A3B0080F779 /* CreateGalleryCollectionViewController.swift in Sources */,
 				38C28D81278D31E4006A5603 /* DeepLabV3.mlmodel in Sources */,
+				38022CD42795B893001B6D8B /* Frame_5ViewController.swift in Sources */,
 				385EDDA527814CD30080F779 /* Uiimage + Extension.swift in Sources */,
 				38C28D95278D3902006A5603 /* Math.swift in Sources */,
 				38C28D97278D3902006A5603 /* Predictions.swift in Sources */,
+				3861AE12279469F6005DDDDE /* Frame_2ViewController.swift in Sources */,
 				38198D29277D52B600091D78 /* ShadowTextView.swift in Sources */,
 				385A17EB277DEA610083FD21 /* AddBackgroundViewController.swift in Sources */,
 				38FA3FD027795BFB00B0D15E /* AppDelegate.swift in Sources */,
 				38C28DA0278D3902006A5603 /* NonMaxSuppression.swift in Sources */,
+				38B05491279E42610081A6F8 /* StickerMenu.swift in Sources */,
+				38022CE22796B958001B6D8B /* Frame_8ViewController.swift in Sources */,
 				385EDDA327814C740080F779 /* UIView+Extension.swift in Sources */,
+				38022CEB2798156E001B6D8B /* AlignTextView.swift in Sources */,
 				38198D03277B59D900091D78 /* MenuButtonAddTextCollectionViewCell.swift in Sources */,
 				38A478D227817B9500BD2C4D /* ScaleUIImageView.swift in Sources */,
 				38C28D9A278D3902006A5603 /* UIImage+RawBytes.swift in Sources */,
 				385EDDA1278097A30080F779 /* BaseViewController.swift in Sources */,
 				38C28D5F278D1404006A5603 /* FontCollectionViewCell.swift in Sources */,
 				38C28DA3278D3902006A5603 /* CVPixelBuffer+Resize.swift in Sources */,
+				38022CE62796BBDB001B6D8B /* Frame_9ViewController.swift in Sources */,
 				38A478DA2783ED4A00BD2C4D /* RatioScreenCollectionViewCell.swift in Sources */,
 				38C28DA2278D3902006A5603 /* MLMultiArray+Image.swift in Sources */,
 				38198CFE277B545B00091D78 /* AddTextViewController.swift in Sources */,
@@ -782,8 +856,10 @@
 				38C28DC42791C33B006A5603 /* StickerCollectionViewCell.swift in Sources */,
 				38C28DA1278D3902006A5603 /* CGImage+RawBytes.swift in Sources */,
 				38198D1C277C4D0800091D78 /* TextColorCollectionViewCell.swift in Sources */,
+				38B0548A279E40470081A6F8 /* BottomCollectionViewCell.swift in Sources */,
 				38C28D9C278D3902006A5603 /* MLModel+Images.swift in Sources */,
 				38C28D58278D1239006A5603 /* Constant.swift in Sources */,
+				38022CED279AA919001B6D8B /* BackgroundModel.swift in Sources */,
 				38C28D99278D3902006A5603 /* CGImagePropertyOrientation.swift in Sources */,
 				38C28D9B278D3902006A5603 /* MLMultiArray+Helpers.swift in Sources */,
 				38C28DA6278D3AA5006A5603 /* CIImage + Extension.swift in Sources */,
@@ -793,12 +869,15 @@
 				385EDD9B278054F50080F779 /* ToolsFrameView.swift in Sources */,
 				38198CF5277B0D5700091D78 /* MenuButton.swift in Sources */,
 				38FA400D27799FEF00B0D15E /* CustomeBoderRadiusView.swift in Sources */,
+				38B0549627AF61260081A6F8 /* CornerCustomeView.swift in Sources */,
 				38A478DD2783EFA900BD2C4D /* RatioScreenModel.swift in Sources */,
 				38198CEF2779A25600091D78 /* HomeViewController.swift in Sources */,
+				3892BD9927950EB40000FED3 /* Frame_4ViewController.swift in Sources */,
 				385A17F3277F39720083FD21 /* GradientColorModel.swift in Sources */,
 				38C28DCE2791D00C006A5603 /* StickerTableViewCell.swift in Sources */,
 				38C28D9D278D3902006A5603 /* CoreML+Combine.swift in Sources */,
 				38198D0F277C024100091D78 /* ColorModel.swift in Sources */,
+				38022CDE2796B539001B6D8B /* Frame_7ViewController.swift in Sources */,
 				38C28D94278D3902006A5603 /* Array+Extensions.swift in Sources */,
 				38C28D9F278D3902006A5603 /* CGImage+CVPixelBuffer.swift in Sources */,
 				385A1801277FDF5F0083FD21 /* CustomeUIImageView.swift in Sources */,
@@ -806,6 +885,7 @@
 				38C28DCA2791C8C8006A5603 /* StickerHeaderView.swift in Sources */,
 				38C28DB627915A33006A5603 /* StickerModel.swift in Sources */,
 				38198D0D277C01F900091D78 /* UIColor + Extension.swift in Sources */,
+				3892BD932795093A0000FED3 /* Frame_3ViewController.swift in Sources */,
 				385A17F9277F3AE40083FD21 /* GradientColorCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -951,8 +1031,11 @@
 				DEVELOPMENT_TEAM = X9XAKZ8N26;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Smart Photo Kit/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to use your camera to take picture for edit";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need to use your camera to get picture for edit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -960,12 +1043,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiennguyen.Smart-Photo-Kit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -980,8 +1063,11 @@
 				DEVELOPMENT_TEAM = X9XAKZ8N26;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Smart Photo Kit/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to use your camera to take picture for edit";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need to use your camera to get picture for edit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -989,12 +1075,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiennguyen.Smart-Photo-Kit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1031,29 +1117,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		38C28DAA27900A5B006A5603 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38C28DA927900A5A006A5603 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		38C28DAC27900A5B006A5603 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38C28DA927900A5A006A5603 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		38C28DAE27900A5B006A5603 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38C28DA927900A5A006A5603 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		38C28DB027900A5B006A5603 /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38C28DA927900A5A006A5603 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 38FA3FC427795BFB00B0D15E /* Project object */;
 }

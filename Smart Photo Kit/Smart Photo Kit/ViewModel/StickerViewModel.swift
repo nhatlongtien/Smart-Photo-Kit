@@ -25,9 +25,14 @@ class StickerViewModel{
                     let holiday = StickerModel(listItem: data["holidays"].arrayValue, groupName: "Holidays")
                     let nature = StickerModel(listItem: data["nature"].arrayValue, groupName: "Nature")
                     let ecommerce = StickerModel(listItem: data["pricetag_ecommerce"].arrayValue, groupName: "Ecommerce & Price tag")
+                    let label = StickerModel(listItem: data["label"].arrayValue, groupName: "Label")
+                    let emoji = StickerModel(listItem: data["emoji"].arrayValue, groupName: "Emoji")
+                    returnSticker.append(emoji)
+                    returnSticker.append(ecommerce)
+                    returnSticker.append(label)
                     returnSticker.append(holiday)
                     returnSticker.append(nature)
-                    returnSticker.append(ecommerce)
+                    
                 }
                 completionHandler(true, returnSticker)
             }

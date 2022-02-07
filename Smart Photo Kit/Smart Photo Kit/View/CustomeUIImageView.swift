@@ -10,6 +10,7 @@ import UIKit
 @IBDesignable
 class CustomeUIImageView:UIImageView{
     @IBInspectable var rotate:CGFloat = 0.0
+    @IBInspectable var radius:CGFloat = 0.0
     override func prepareForInterfaceBuilder() {
         setupView()
     }
@@ -20,5 +21,7 @@ class CustomeUIImageView:UIImageView{
         let radians = rotate / 180.0 * CGFloat.pi
         self.transform = self.transform.rotated(by: radians)
         self.clipsToBounds = true
+        self.layer.cornerRadius = radius
+        self.contentMode = .scaleAspectFill
     }
 }

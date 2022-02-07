@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="100" height="55"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_crop_white" translatesAutoresizingMaskIntoConstraints="NO" id="5Fd-Ko-kUP">
-                                <rect key="frame" x="35" y="0.0" width="30" height="30"/>
+                                <rect key="frame" x="35" y="3" width="30" height="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="XUC-Oe-ctZ"/>
@@ -39,7 +39,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="PTd-h3-iCA" secondAttribute="trailing" constant="2" id="2mN-33-SUX"/>
                             <constraint firstItem="PTd-h3-iCA" firstAttribute="leading" secondItem="mZV-LD-eIW" secondAttribute="leading" constant="2" id="3F1-0I-q34"/>
-                            <constraint firstItem="5Fd-Ko-kUP" firstAttribute="top" secondItem="mZV-LD-eIW" secondAttribute="top" id="5sv-b8-BN3"/>
+                            <constraint firstItem="5Fd-Ko-kUP" firstAttribute="top" secondItem="mZV-LD-eIW" secondAttribute="top" constant="3" id="5sv-b8-BN3"/>
                             <constraint firstItem="5Fd-Ko-kUP" firstAttribute="centerX" secondItem="mZV-LD-eIW" secondAttribute="centerX" id="QDB-eb-AAW"/>
                             <constraint firstAttribute="bottom" secondItem="PTd-h3-iCA" secondAttribute="bottom" constant="5" id="pYH-t5-KnJ"/>
                         </constraints>

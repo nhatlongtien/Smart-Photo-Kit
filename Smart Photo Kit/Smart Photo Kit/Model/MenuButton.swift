@@ -16,13 +16,13 @@ class MenuButton{
     }
     static func share() -> [MenuButton]{
         return [
-            MenuButton(name: "Crop", iconName: "icon_crop_white"),
-            MenuButton(name: "Edit", iconName: "icon_edited_white"),
+            MenuButton(name: "Smart Kit", iconName: "remove_bg_icon"),
+            MenuButton(name: "Crop", iconName: "crop"),
+            MenuButton(name: "Edit", iconName: "edit"),
             MenuButton(name: "Filter", iconName: "icon_filter_white"),
-            MenuButton(name: "Remove Bg", iconName: "remove_bg_icon"),
             MenuButton(name: "Add Text", iconName: "add_text_icon"),
-            MenuButton(name: "Photo Creator", iconName: "designer_icon"),
-            MenuButton(name: "Frame", iconName: "frame_icon"),
+            MenuButton(name: "Photo Creator", iconName: "photo_creator"),
+            MenuButton(name: "Frame", iconName: "collage"),
             //MenuButton(name: "Remove", iconName: "frame_icon"),
         ]
     }

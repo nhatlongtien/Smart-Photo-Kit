@@ -18,12 +18,12 @@ class AddTextmenuButton{
     static func share() -> [AddTextmenuButton]{
         return [
             AddTextmenuButton(title: "Add Text", icon: "add_text_box_icon"),
-            AddTextmenuButton(title: "Color", icon: "font_color_icon"),
-            AddTextmenuButton(title: "Size", icon: "font_size_icon"),
             AddTextmenuButton(title: "Style", icon: "font_style_icon"),
+            AddTextmenuButton(title: "Size", icon: "font_size_icon"),
+            AddTextmenuButton(title: "Color", icon: "font_color_icon"),
             AddTextmenuButton(title: "Shadow", icon: "font_shadow_icon"),
             AddTextmenuButton(title: "Alignment", icon: "text_alignment_icon"),
-            AddTextmenuButton(title: "Spacing", icon: "text_spacing_icon"),
+            //AddTextmenuButton(title: "Spacing", icon: "text_spacing_icon"),
         ]
     }
 }

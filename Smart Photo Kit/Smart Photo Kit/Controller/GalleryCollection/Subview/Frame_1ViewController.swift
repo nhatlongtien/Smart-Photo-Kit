@@ -54,7 +54,7 @@ class Frame_1ViewController: BaseViewController {
         
     }
     
-    
+    //MARK: UIEvent
     @IBAction func img1WasPressed(_ sender: Any) {
         typeButton = .img1
         var config = FMPhotoPickerConfig()
@@ -83,11 +83,11 @@ class Frame_1ViewController: BaseViewController {
     @IBAction func cancelButtonWasPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
     @IBAction func doneButtonWasPressed(_ sender: Any) {
         let resultImage = workplaceView.asImage()
-        
-        //saveImageToAllbum(with: resultImage)
+        let imageDataDict:[String: UIImage] = ["image": resultImage]
+        NotificationCenter.default.post(name: Notification.Name(rawValue: Constant.NOTIFI_FRAME), object: nil, userInfo: imageDataDict)
+        self.dismiss(animated: true, completion: nil)
     }
     //MARK: Helper Method
     func addStickerImageToFrameImage(image:UIImage?){
@@ -116,7 +116,7 @@ extension Frame_1ViewController:ToolsFrameViewDelegate{
         let targetVC = StickerViewController()
         targetVC.sticker = sticker!
         targetVC.delegate = self
-        targetVC.modalPresentationStyle = .fullScreen
+        targetVC.modalPresentationStyle = .custom
         self.present(targetVC, animated: true, completion: nil)
     }
     
@@ -185,7 +185,5 @@ extension Frame_1ViewController:StickerViewDelegate{
     func stickerViewDidClose(_ stickerView: StickerView) {
         
     }
-    
-    
 }
 
